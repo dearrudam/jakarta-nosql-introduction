@@ -21,9 +21,22 @@
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compile.version>3.5.1</maven.compile.version>
         <maven-surefire-plugin.version>3.1.0</maven-surefire-plugin.version>
+        <weld.se.core.version>5.1.0.Final</weld.se.core.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.jboss.weld.se</groupId>
+            <artifactId>weld-se-shaded</artifactId>
+            <version>${weld.se.core.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse</groupId>
+            <artifactId>yasson</artifactId>
+            <version>3.0.3</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>
