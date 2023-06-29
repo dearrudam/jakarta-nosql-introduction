@@ -1,0 +1,9 @@
+services:
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - 6379:6379
+
+#docker-compose -f redis.yaml exec redis redis-cli

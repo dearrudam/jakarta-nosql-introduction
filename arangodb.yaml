@@ -1,0 +1,10 @@
+services:
+
+  arangodb:
+    image: arangodb/arangodb
+    restart: always
+    environment:
+      ARANGO_NO_AUTH: 1
+    ports:
+      -  8529:8529
+    #  access http://127.0.0.1:5984/_utils to browse on the database

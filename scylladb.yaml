@@ -1,0 +1,7 @@
+services:
+
+  scylladb:
+    image: scylladb/scylla
+    restart: always
+    ports:
+      - 9043:9042

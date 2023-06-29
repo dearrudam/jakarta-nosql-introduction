@@ -1,0 +1,12 @@
+services:
+
+  couchdb:
+    image: couchdb
+    restart: always
+    environment:
+      COUCHDB_USER: root
+      COUCHDB_PASSWORD: example
+    ports:
+      - 5984:5984
+
+    #  access http://127.0.0.1:5984/_utils to browse on the database

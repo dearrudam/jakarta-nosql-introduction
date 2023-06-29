@@ -1,0 +1,25 @@
+services:
+
+  cassandra:
+    image: cassandra
+    restart: always
+    ports:
+      - 9042:9042
+    networks:
+      - cassandra
+  cqlsh:
+    image: nuvo/docker-cqlsh
+    restart: always
+    links:
+      - "cassandra:cassandra"
+    environment:
+      CQLVERSION: 3.4.5
+      QLSH_PORT: 9042
+      CQLSH_HOST: cassandra
+    networks:
+      - cassandra
+
+    # docker-compose -f cassandra.yaml exec cqlsh cqlsh cassandra 9042 --cqlversion='3.4.6'
+
+networks:
+  cassandra: {}
