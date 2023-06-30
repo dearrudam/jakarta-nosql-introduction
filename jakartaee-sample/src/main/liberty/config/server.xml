@@ -1,0 +1,17 @@
+<server description="defaultServer">
+
+    <featureManager>
+        <feature>jakartaee-10.0</feature>
+        <feature>mpOpenAPI-3.1</feature>
+    </featureManager>
+
+    <basicRegistry id="defaultBasicRegistry" realm="BasicRealm">
+        <user name="username" password="password" />
+    </basicRegistry>
+
+    <keyStore id="defaultKeyStore" password="password" />
+
+    <httpEndpoint id="defaultHttpEndpoint" host="*" httpPort="9080" httpsPort="9443" /> 
+
+    <webApplication location="jakartaee-sample.war" contextRoot="/"/>
+</server>

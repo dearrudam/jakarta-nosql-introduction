@@ -8,6 +8,9 @@
     <packaging>pom</packaging>
     <name>jakarta-nosql-introduction</name>
     <modules>
-        <module>jakarta-nosql-se</module>
+        <module>javase-sample</module>
+        <module>quarkus-sample</module>
+        <module>microprofile-sample</module>
+        <module>jakartaee-sample</module>
     </modules>
 </project>
